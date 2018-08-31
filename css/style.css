@@ -48,7 +48,6 @@ li a {
 }
 
 li a:hover:not(.active) {
-    color:white;
     opacity: 0.8;
 }
 
