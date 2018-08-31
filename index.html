@@ -3,6 +3,7 @@
     <head>
         <title> Lakkanna GitHub </title>
         <link rel="stylesheet" href="css/style.css"> </link>
+        <link rel="stylesheet" href="css/snippet.css"> </link>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
     <body>
@@ -15,14 +16,10 @@
                         <li style="float: right;"><a class="" href="#about">About</a></li>
                     </ul>
         </header>
-        <br><br>
+        <br><br><br><br>
+       
         <section class="row">
-            <article class="story full">
-                    <a href="https://www.npmjs.org/package/consolemessage"> <img src="https://img.shields.io/npm/v/consolemessage.svg"> </img> </a>
-            </article>
-        </section>
-        <section class="row">
-            <article class="story quarter">
+            <article class="story quarter npm-bg">
                    
                 <div id="social-icons">
                     <a href="https://www.npmjs.com/~linja"> <i class="fab fa-npm npm"></i>  </a> <br> 
@@ -31,31 +28,70 @@
                    
                 </div>
             </article>
-            <article class="story half">
-                    <p>
-                            <p class="article-title">Lorem Ipsum</p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+            <article class="story half npm-bg">
+                
+                            <p class="article-title">ConsoleMessage NodeJS Library 
+                            <a href="https://www.npmjs.org/package/consolemessage"> <img src="https://img.shields.io/npm/v/consolemessage.svg"> </img> </a> </p> <br>
+                            ConsoleMessage is a Javascript library to write colored logs on console, it'll helpful to 
+                            identify type of log message by looking at color. 
+                            You can find more about this in  <a href="https://www.npmjs.org/package/consolemessage"> npm</a>.
+                           
+                               <div class="install">
+                                  <pre>  npm install -g consolemessage </pre>
+                               </div>
+                               <div class="input">
+                                    <code>
+                                            <i class="comment">//logger.js</i> <br><br>
+                                            var console = require('consolemessage'); <br><br>
+            
+                                            console.message('success message', SUCCESS); <br>
+                                            console.message('debug message', DEBUG);    <br>
+                                            console.message('info message', INFO);     <br>
+                                            console.message('warning message', WARNING);  <br>
+                                            console.message('error message', ERROR);    <br>
+                                            console.message('crtitical message', CRITICAL);    <br>
+                                    </code>
+                               </div>
+                              
+                               <div class="output">
+                                    <code>
+                                            <i class="comment">//output</i> <br><br>
+                                    
+                                            <p style="color: green;">success message</p>
+                                            <p style="color: gray;">debug message</p>
+                                            <p style="color: blue;">info message</p>
+                                            <p style="color: orange;">warning message</p>
+                                            <p style="color: red;">error message</p>
+                                            <p style="color: magenta;">critical message</p>
+                                
+                                    </code>
+                               </div>
+                              
+                           
+                
                 </article>
-                <article class="story quarter">
+                <article class="story quarter npm-bg">
                        
                     </article>
            </section>
+          
            <section class="row">
-                <article class="story quarter">
+                <article class="story quarter" style="background-color: #B2DFDB;">
                    
                 </article>
-                <article class="story half">
+                <article class="story half" style="background-color: #B2DFDB;">
                         <p>
                                 <p class="article-title">Lorem Ipsum</p>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         </p>
                     </article>
-                    <article class="story quarter">
+                    <article class="story quarter" style="background-color: #B2DFDB;">
                           
                     </article>
                </section>
-              
+        
         <script src="js/navigationhide.js"></script>
+       
+        
     </body>
 </html>

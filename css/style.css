@@ -16,6 +16,7 @@
     box-sizing: border-box;
   }
 
+  
   .brand {
       display: block;
       font-family: 'NeuePixel';
@@ -47,14 +48,14 @@ li a {
     display: block;
     color: white;
     font-size: 20px;
-    opacity: 0.4;
+    opacity: 0.8;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover:not(.active) {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .active {
@@ -63,19 +64,28 @@ li a:hover:not(.active) {
 }
 
 .row {
+    margin-top: 0px;
     display: flex;
     width: 100%;
     align-items: stretch;
     padding: 40px; 
   }
-  
+ 
   .story {
     text-align: justify;
-    padding: 0 10px;
-    font-size: 40px;
+    padding: 30px 0px 30px 0px;
+    font-size: 30px;
     font-family: 'VT323'
   }
-  
+  .code {
+    font-size: 18px;
+    padding: 30px;
+    margin-top: 20px;
+    background: #E0F2F1;
+    color: #4DB6AC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: normal;
+  }
   .quarter {
     width: 20%;
   }
@@ -92,10 +102,10 @@ li a:hover:not(.active) {
   }
   
   .article-title {
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
-    font-weight: normal;
-    font-style: italic;
+    font-weight: bold;
+  
   }
 
   i:hover {
@@ -103,7 +113,7 @@ li a:hover:not(.active) {
   }
   .npm {
     position: fixed;
-    color: red;
+    color: #B71C1C;
     margin-top: 100px;
     line-height: 1.5;
     opacity: 0.6;
@@ -113,12 +123,13 @@ li a:hover:not(.active) {
     position: fixed;
     margin-top: 110px;
     line-height: 1.5;
+    color: #424242;
     opacity: 0.6;
     margin-left: 70px;
   }
   .twitter {
     position: fixed;
-    color: deepskyblue;
+    color: #00B0FF;
     margin-top: 120px;
     line-height: 3.5;
     opacity: 0.6;
@@ -132,4 +143,7 @@ li a:hover:not(.active) {
     line-height: 1.5;
     margin-left: 70px;
   }
- 
+ .npm-bg {
+   background-color:#FAFAFA;
+   color: #757575;
+ }
