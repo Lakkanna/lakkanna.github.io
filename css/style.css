@@ -10,6 +10,11 @@
     font-weight: normal;
     src: url("../fonts/VT323-Regular.ttf") format("opentype");
   }
+  @font-face { 
+    font-family: "Memphis"; 
+    src:url(https://static1.squarespace.com/static/55b1810ae4b0a4f7d763659d/t/564902b9e4b0f54883cbb43c/1447625401139/MemphisLTStd-Medium.otf) format("opentype"); 
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -142,3 +147,8 @@ li a:hover:not(.active) {
    background-color:#FAFAFA;
    color: #757575;
  }
+.footer{
+  background-color: #212121;
+  color: #616161;
+  font-family:"Memphis" !important;
+}
