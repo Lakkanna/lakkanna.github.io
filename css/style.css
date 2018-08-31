@@ -16,7 +16,6 @@
     box-sizing: border-box;
   }
 
-  
   .brand {
       display: block;
       font-family: 'NeuePixel';
@@ -24,6 +23,7 @@
       position: fixed;
       width: 100%;
       font-weight: bold;
+      box-shadow: 1px 2px 10px black;
   }
   .brandname {
     font-size: 40px;
@@ -68,24 +68,17 @@ li a:hover:not(.active) {
     display: flex;
     width: 100%;
     align-items: stretch;
-    padding: 40px; 
+    padding: 0px; 
   }
  
   .story {
     text-align: justify;
-    padding: 30px 0px 30px 0px;
-    font-size: 30px;
-    font-family: 'VT323'
-  }
-  .code {
+    padding: 0px 20px;
     font-size: 18px;
-    padding: 30px;
-    margin-top: 20px;
-    background: #E0F2F1;
-    color: #4DB6AC;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: normal;
+    line-height: 1.6;
+    font-family: Georgia, serif;
   }
+  
   .quarter {
     width: 20%;
   }
@@ -102,47 +95,49 @@ li a:hover:not(.active) {
   }
   
   .article-title {
-    font-size: 35px;
+    font-size: 36px;
     text-align: center;
     font-weight: bold;
-  
+    font-family: 'VT323';
   }
 
   i:hover {
     opacity: 1;  
   }
+ 
   .npm {
     position: fixed;
     color: #B71C1C;
-    margin-top: 100px;
+    font-size:38px;
+    margin-top: 215px;
     line-height: 1.5;
+    
+    text-shadow: 3px 5px 5px gray;
     opacity: 0.6;
     margin-left: 70px;
   }
   .github {
     position: fixed;
-    margin-top: 110px;
+    margin-top: 240px;
     line-height: 1.5;
+    text-shadow: 3px 5px 5px gray;
     color: #424242;
+    font-size:38px;
     opacity: 0.6;
     margin-left: 70px;
   }
   .twitter {
     position: fixed;
     color: #00B0FF;
-    margin-top: 120px;
+    margin-top: 270px;
     line-height: 3.5;
     opacity: 0.6;
+    font-size:38px;
+    text-shadow: 3px 5px 10px black;
+    font-size: 50x;
     margin-left: 70px;
   }
-  .google-plus {
-    position: fixed;
-    color: red;
-    opacity: 0.8;
-    margin-top: 210px;
-    line-height: 1.5;
-    margin-left: 70px;
-  }
+  
  .npm-bg {
    background-color:#FAFAFA;
    color: #757575;

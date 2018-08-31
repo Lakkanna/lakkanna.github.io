@@ -13,32 +13,34 @@
                         <li style="float: right;"><a  href="#home">Home</a></li>
                         <li style="float: right;"><a href="#news">News</a></li>
                         <li style="float: right;"><a href="#contact">Contact</a></li>
-                        <li style="float: right;"><a class="" href="#about">About</a></li>
+                        <li style="float: right;"><a href="https://www.npmjs.com/~linja"> <i class="fab fa-npm"></i>  </a></li>
                     </ul>
         </header>
-        <br><br><br><br>
        
         <section class="row">
-            <article class="story quarter npm-bg">
+                <article class="story quarter npm-bg">
                    
-                <div id="social-icons">
-                    <a href="https://www.npmjs.com/~linja"> <i class="fab fa-npm npm"></i>  </a> <br> 
-                    <a href="https://github.com/lakkanna"> <i class="fab fa-github github"> </i>  </a> <br>
-                    <a href="https://twitter.com/lakkannaw"> <i class="fab fa-twitter twitter"></i>  </a> 
+                        <div class="social-icons" id="social-icons">
+                                <a href="https://www.npmjs.com/~linja"> <i class="fab fa-npm npm"></i>  </a> <br> 
+                                <a href="https://github.com/lakkanna"> <i class="fab fa-github github"> </i>  </a> <br>
+                                <a href="https://twitter.com/lakkannaw"> <i class="fab fa-twitter twitter"></i>  </a> 
+                            </div>  
+                </article>
+            <article class="story half npm-bg" style="margin-top:80px; padding-top:20px;padding-left: 50px;padding-right: 50px;">
                    
-                </div>
-            </article>
-            <article class="story half npm-bg">
-                
                             <p class="article-title">ConsoleMessage NodeJS Library 
                             <a href="https://www.npmjs.org/package/consolemessage"> <img src="https://img.shields.io/npm/v/consolemessage.svg"> </img> </a> </p> <br>
                             ConsoleMessage is a Javascript library to write colored logs on console, it'll helpful to 
-                            identify type of log message by looking at color. 
-                            You can find more about this in  <a href="https://www.npmjs.org/package/consolemessage"> npm</a>.
+                            identify type of log message by looking at color. ConsoleMessage as function called <b><i>log</i></b> which takes two
+                            parameters that are <b> <i> message</i> </b> and the <b><i>flag</i></b>. <b><i>message</i></b> is the log message which user wants
+                            to printed on console. <b><i>flag</i></b> is the indication for type of log message. List of flags are 
+                            <i>SUCCESS, DEBUG, INFO, WARNING, ERROR, CRITICAL</i>.
+                            You can find more about this in  <a href="https://www.npmjs.org/package/consolemessage"> npm</a>.<br><br>
                            
                                <div class="install">
                                   <pre>  npm install -g consolemessage </pre>
                                </div>
+                               <br><br>
                                <div class="input">
                                     <code>
                                             <i class="comment">//logger.js</i> <br><br>
@@ -52,7 +54,7 @@
                                             console.message('crtitical message', CRITICAL);    <br>
                                     </code>
                                </div>
-                              
+                              <br><br>
                                <div class="output">
                                     <code>
                                             <i class="comment">//output</i> <br><br>
@@ -71,8 +73,9 @@
                 
                 </article>
                 <article class="story quarter npm-bg">
-                       
+                
                     </article>
+               
            </section>
           
            <section class="row">
@@ -89,9 +92,9 @@
                           
                     </article>
                </section>
+               
+           
         
         <script src="js/navigationhide.js"></script>
-       
-        
     </body>
 </html>
