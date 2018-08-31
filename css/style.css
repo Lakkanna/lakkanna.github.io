@@ -6,17 +6,53 @@
   }
  
   .brand {
-      margin-top: -10px;
+      margin-top: 10px;
+      font-family: 'NeuePixel';
       background-color: green;
+      position: sticky;
       width: 100%;
   }
-  .title {
-    font-family: 'NeuePixel';
-    font-size: 60px;
-    margin-left: 20px;
-    opacity: 0.4;
+  .brandname {
+    font-size: 
+    30px;color: black; 
+    opacity: 0.6;
+  }
+  .brandname:hover {
+    opacity: 0.8;
   }
   .content {
     font-family: 'Library 3 am soft';
     font-size: 20px;
   }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-size: 20px;
+    opacity: 0.4;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color:white;
+    opacity: 0.8;
+}
+
+.active {
+    color: white;
+    opacity: 1;
+}
