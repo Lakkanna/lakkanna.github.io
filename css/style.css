@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Tangerine';
+    font-family: 'NeuePixel';
     font-style: normal;
     font-weight: normal;
-    src: local('tangerine'), url('http://example.com/tangerine.ttf') format('truetype');
+    src: url("fonts/neue-pixel-sans/NeuePixelSans.ttf") format("opentype");
   }
  
   .brand {
@@ -11,7 +11,7 @@
       width: 100%;
   }
   .title {
-    font-family: 'Neue Pixel Sans';
+    font-family: 'NeuePixel';
     font-size: 60px;
     margin-left: 20px;
     opacity: 0.4;
