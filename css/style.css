@@ -4,33 +4,39 @@
     font-weight: normal;
     src: url("../fonts/neue-pixel-sans/NeuePixelSans.ttf") format("opentype");
   }
- 
-  .brand {
-      margin-top: 10px;
-      font-family: 'NeuePixel';
-      background-color: green;
-      position: sticky;
-      width: 100%;
+  @font-face {
+    font-family: 'VT323';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/VT323-Regular.ttf") format("opentype");
   }
-  .brandname {
-    font-size: 
-    30px;color: black; 
-    opacity: 0.6;
-  }
-  .brandname:hover {
-    opacity: 0.8;
-  }
-  .content {
-    font-family: 'Library 3 am soft';
-    font-size: 20px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
+  .brand {
+      display: block;
+      font-family: 'NeuePixel';
+      background-color:#33691E;
+      position: fixed;
+      width: 100%;
+      font-weight: bold;
+  }
+  .brandname {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+  }
+ 
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: green;
+    
 }
 
 li {
@@ -55,3 +61,75 @@ li a:hover:not(.active) {
     color: white;
     opacity: 1;
 }
+
+.row {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    padding: 40px; 
+  }
+  
+  .story {
+    text-align: justify;
+    padding: 0 10px;
+    font-size: 40px;
+    font-family: 'VT323'
+  }
+  
+  .quarter {
+    width: 20%;
+  }
+  
+  .half {
+    width: 60%;
+  }
+  .full {
+      float: right;
+      width: 100%;
+  }
+  .article-img {
+    width: 100%;
+  }
+  
+  .article-title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  i:hover {
+    opacity: 1;  
+  }
+  .npm {
+    position: fixed;
+    color: red;
+    margin-top: 100px;
+    line-height: 1.5;
+    opacity: 0.6;
+    margin-left: 70px;
+  }
+  .github {
+    position: fixed;
+    margin-top: 110px;
+    line-height: 1.5;
+    opacity: 0.6;
+    margin-left: 70px;
+  }
+  .twitter {
+    position: fixed;
+    color: deepskyblue;
+    margin-top: 120px;
+    line-height: 3.5;
+    opacity: 0.6;
+    margin-left: 70px;
+  }
+  .google-plus {
+    position: fixed;
+    color: red;
+    opacity: 0.8;
+    margin-top: 210px;
+    line-height: 1.5;
+    margin-left: 70px;
+  }
+ 
