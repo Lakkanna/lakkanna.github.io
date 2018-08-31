@@ -2,7 +2,7 @@
     font-family: 'NeuePixel';
     font-style: normal;
     font-weight: normal;
-    src: url("fonts/neue-pixel-sans/NeuePixelSans.ttf") format("opentype");
+    src: url("../fonts/neue-pixel-sans/NeuePixelSans.ttf") format("opentype");
   }
  
   .brand {
