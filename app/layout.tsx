@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { PERSONAL_INFO, SOCIAL_LINKS, EXTERNAL_LINKS } from '@/constants'
+import Chat from '@/components/Chat'
 
 const dankMono = localFont({
   src: [
@@ -54,6 +55,7 @@ export default function RootLayout({
       </head>
       <body className={`${dankMono.variable} font-display bg-background-light dark:bg-background-dark text-content-light dark:text-content-dark`}>
         {children}
+        <Chat />
       </body>
     </html>
   )
