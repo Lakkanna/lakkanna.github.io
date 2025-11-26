@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import SocialIcons from './SocialIcons'
-import { ROUTES, PERSONAL_INFO } from '@/constants'
+import Link from 'next/link';
+import SocialIcons from './SocialIcons';
+import { ROUTES, PERSONAL_INFO } from '@/constants';
 
 export default function Footer() {
   return (
@@ -9,6 +9,5 @@ export default function Footer() {
         <SocialIcons size="md" layout="horizontal" />
       </div>
     </footer>
-  )
+  );
 }
-

@@ -11,11 +11,13 @@ A Next.js portfolio website built for GitHub Pages deployment.
 ### Installation
 
 1. Install dependencies:
+
 ```bash
 pnpm install
 ```
 
 2. Run the development server:
+
 ```bash
 pnpm run dev
 ```
@@ -43,6 +45,7 @@ The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml
    - Under "Source", select "GitHub Actions"
 
 2. Push your changes to the `master` branch:
+
 ```bash
 git add .
 git commit -m "Deploy portfolio"
@@ -54,6 +57,7 @@ The workflow will automatically build and deploy your site.
 ### Manual Deployment
 
 1. Build the static site:
+
 ```bash
 pnpm run build
 ```
@@ -91,4 +95,3 @@ pnpm run build
 ## License
 
 All rights reserved.
-
