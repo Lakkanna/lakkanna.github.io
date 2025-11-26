@@ -2,7 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ROUTES, SOCIAL_LINKS, PERSONAL_INFO } from '@/constants';
+import {
+  ROUTES,
+  SOCIAL_LINKS,
+  PERSONAL_INFO,
+  EXTERNAL_LINKS,
+} from '@/constants';
 import Logo from './Logo';
 
 export default function TopNavBar() {
@@ -50,6 +55,15 @@ export default function TopNavBar() {
               >
                 Blogs
               </Link>
+              <a
+                className="text-sm font-medium hover:text-primary dark:hover:text-primary whitespace-nowrap cursor-pointer"
+                href={EXTERNAL_LINKS.resumeLink}
+                download="Lakkanna-Walikar-SSE-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
             </div>
             <div className="flex items-center gap-4 flex-shrink-0">
               <a

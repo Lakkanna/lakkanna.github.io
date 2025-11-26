@@ -37,4 +37,6 @@ export const PROJECT_LINKS = {
 export const EXTERNAL_LINKS = {
   materialSymbols:
     'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
+  resumeLink:
+    'https://pub-a3afaac535824af1a3f28e72290ebcd2.r2.dev/Lakkanna-Walikar-SSE-Resume.pdf',
 } as const;
