@@ -8,31 +8,33 @@ export const PERSONAL_INFO = {
   phoneFormatted: '+91-7259961669',
   location: 'Bangalore - 560016, India',
   copyrightYear: 2025,
-} as const
+} as const;
 
 // Social Media Links
 export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/in/lakkanna-walikar-35702662/',
   github: 'https://github.com/lakkanna',
   medium: 'https://medium.com/@lakkannawalikar',
-} as const
+} as const;
 
 // Navigation Routes
 export const ROUTES = {
   home: '/',
   projects: '/projects',
   contact: '/contact',
-} as const
+} as const;
 
 // Project Links
 export const PROJECT_LINKS = {
   myMacros: 'https://gameofcoders.app/',
-  cssConverter: 'https://marketplace.visualstudio.com/items?itemName=lakkannawalikar.css-converter',
-  travisClient: 'https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.the-travis-client',
-} as const
+  cssConverter:
+    'https://marketplace.visualstudio.com/items?itemName=lakkannawalikar.css-converter',
+  travisClient:
+    'https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.the-travis-client',
+} as const;
 
 // External Links
 export const EXTERNAL_LINKS = {
-  materialSymbols: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
-} as const
-
+  materialSymbols:
+    'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
+} as const;

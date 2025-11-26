@@ -1,9 +1,9 @@
-import TopNavBar from '@/components/TopNavBar'
-import HeroSection from '@/components/HeroSection'
-import StatsSection from '@/components/StatsSection'
-import ExperienceSection from '@/components/ExperienceSection'
-import Footer from '@/components/Footer'
-import Background from '@/components/Background'
+import TopNavBar from '@/components/TopNavBar';
+import HeroSection from '@/components/HeroSection';
+import StatsSection from '@/components/StatsSection';
+import ExperienceSection from '@/components/ExperienceSection';
+import Footer from '@/components/Footer';
+import Background from '@/components/Background';
 
 export default function Home() {
   return (
@@ -23,6 +23,5 @@ export default function Home() {
         <Footer />
       </div>
     </div>
-  )
+  );
 }
-
