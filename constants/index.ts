@@ -22,6 +22,7 @@ export const ROUTES = {
   home: '/',
   projects: '/projects',
   contact: '/contact',
+  svgMaker: '/svg-maker/',
 } as const;
 
 // Project Links
@@ -39,4 +40,13 @@ export const EXTERNAL_LINKS = {
     'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
   resumeLink:
     'https://pub-a3afaac535824af1a3f28e72290ebcd2.r2.dev/Lakkanna-Walikar-SSE-Resume.pdf',
+} as const;
+
+// RAG Configuration
+export const RAG_CONFIG = {
+  embeddingModel: 'Xenova/all-MiniLM-L6-v2',
+  chunkSize: 500,
+  chunkOverlap: 100,
+  topK: 3,
+  resumePdfUrl: EXTERNAL_LINKS.resumeLink,
 } as const;

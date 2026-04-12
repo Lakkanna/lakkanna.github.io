@@ -56,6 +56,12 @@ export default function TopNavBar() {
                 Blogs
               </Link>
               <a
+                className="text-sm font-medium hover:text-primary dark:hover:text-primary whitespace-nowrap"
+                href={ROUTES.svgMaker}
+              >
+                SVG Creator
+              </a>
+              <a
                 className="text-sm font-medium hover:text-primary dark:hover:text-primary whitespace-nowrap cursor-pointer"
                 href={EXTERNAL_LINKS.resumeLink}
                 download="Lakkanna-Walikar-SSE-Resume.pdf"
