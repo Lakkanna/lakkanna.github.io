@@ -23,6 +23,7 @@ export const ROUTES = {
   projects: '/projects',
   contact: '/contact',
   svgMaker: '/svg-maker/',
+  architectPracticeLab: '/architect-practice-lab/',
 } as const;
 
 // Project Links
