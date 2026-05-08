@@ -24,6 +24,7 @@ export const ROUTES = {
   contact: '/contact',
   svgMaker: '/svg-maker/',
   architectPracticeLab: '/architect-practice-lab/',
+  noobstoday: '/noobstoday/',
 } as const;
 
 // Project Links

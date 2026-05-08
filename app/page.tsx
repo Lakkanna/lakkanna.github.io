@@ -1,7 +1,7 @@
 import TopNavBar from '@/components/TopNavBar';
 import HeroSection from '@/components/HeroSection';
 import StatsSection from '@/components/StatsSection';
-import ExperienceSection from '@/components/ExperienceSection';
+import ShowcaseSection from '@/components/ShowcaseSection';
 import Footer from '@/components/Footer';
 import Background from '@/components/Background';
 
@@ -17,7 +17,7 @@ export default function Home() {
         </main>
       </div>
       <div className="relative z-0 w-full">
-        <ExperienceSection />
+        <ShowcaseSection />
       </div>
       <div className="relative z-10 w-full">
         <Footer />
