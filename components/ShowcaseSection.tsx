@@ -47,7 +47,7 @@ export default function ShowcaseSection() {
             <a
               key={item.title}
               href={item.link}
-              className="glassmorphic-card group flex flex-col rounded-xl p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="glassmorphic-card flex flex-col rounded-xl p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <span className="material-symbols-outlined mb-4 text-3xl text-primary">
                 {item.icon}
