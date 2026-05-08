@@ -79,7 +79,7 @@ pnpm run build
 │   ├── TopNavBar.tsx
 │   ├── HeroSection.tsx
 │   ├── StatsSection.tsx
-│   ├── ExperienceSection.tsx
+│   ├── ShowcaseSection.tsx
 │   └── Footer.tsx
 └── public/           # Static assets
 ```
