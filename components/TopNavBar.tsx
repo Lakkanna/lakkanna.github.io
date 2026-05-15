@@ -29,16 +29,18 @@ const FOCUS_RING =
 export default function TopNavBar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [lastPathname, setLastPathname] = useState(pathname);
+
+  if (pathname !== lastPathname) {
+    setLastPathname(pathname);
+    setMenuOpen(false);
+  }
 
   const isActive = (path?: string) => {
     if (!path) return false;
     if (path === ROUTES.home) return pathname === ROUTES.home;
     return pathname.startsWith(path);
   };
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     if (!menuOpen) return;

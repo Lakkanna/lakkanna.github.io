@@ -1,4 +1,7 @@
-import { pipeline, env } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.0";
+import {
+  pipeline,
+  env,
+} from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.0';
 
 export const SYSTEM_PROMPT = `
 You are an AI assistant representing **Lakkanna Ramachandra Walikar**, a Senior Software Engineer with 7+ years of professional experience.
@@ -116,48 +119,50 @@ B.Tech in Computer Science — PES University, Bengaluru (2018)
 6. Do not use the response as from The LLM, instead use the persona of Lakkanna Ramachandra Walikar.
 `;
 
-
 // Skip local model check
 env.allowLocalModels = false;
 
 // Use the Singleton pattern to enable lazy construction of the pipeline.
 class PipelineSingleton {
-    static task = 'text-generation';
-    static model = "HuggingFaceTB/SmolLM2-135M-Instruct";
-    static instance = null;
+  static task = 'text-generation';
+  static model = 'HuggingFaceTB/SmolLM2-135M-Instruct';
+  static instance = null;
 
-    static async getInstance(progress_callback = null) {
-        if (this.instance === null) {
-            this.instance = pipeline(this.task, this.model, { device: 'webgpu', progress_callback });
-        }
-        return this.instance;
+  static async getInstance(progress_callback = null) {
+    if (this.instance === null) {
+      this.instance = pipeline(this.task, this.model, {
+        device: 'webgpu',
+        progress_callback,
+      });
     }
+    return this.instance;
+  }
 }
 
 // Listen for messages from the main thread
 self.addEventListener('message', async (event) => {
-    // Retrieve the classification pipeline. When called for the first time,
-    // this will load the pipeline and save it for future use.
-    let classifier = await PipelineSingleton.getInstance(x => {
-        // We also add a progress callback to the pipeline so that we can
-        // track model loading.
-        self.postMessage(x);
-    });
+  // Retrieve the classification pipeline. When called for the first time,
+  // this will load the pipeline and save it for future use.
+  let classifier = await PipelineSingleton.getInstance((x) => {
+    // We also add a progress callback to the pipeline so that we can
+    // track model loading.
+    self.postMessage(x);
+  });
 
-    if (event.data.text === 'initiate') {
-        return;
-    }
-    const messages = [
-        { role: "system", content: SYSTEM_PROMPT },
-        ...event.data.messages,
-    ]
-    console.log('messages before sending: ', messages);
-    // Actually perform the classification
-    let output = await classifier(messages, { max_new_tokens: 128 });
-    console.log(output);
-    // Send the output back to the main thread
-    self.postMessage({
-        status: 'complete',
-        output: output,
-    });
+  if (event.data.text === 'initiate') {
+    return;
+  }
+  const messages = [
+    { role: 'system', content: SYSTEM_PROMPT },
+    ...event.data.messages,
+  ];
+  console.log('messages before sending: ', messages);
+  // Actually perform the classification
+  let output = await classifier(messages, { max_new_tokens: 128 });
+  console.log(output);
+  // Send the output back to the main thread
+  self.postMessage({
+    status: 'complete',
+    output: output,
+  });
 });
