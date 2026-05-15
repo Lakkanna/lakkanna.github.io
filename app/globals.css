@@ -64,13 +64,54 @@ body {
     0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
-/* Grid background with better alignment */
+/* Subtle grid background — softer than the original */
 .grid-background {
   background-image:
-    linear-gradient(to right, rgba(79, 79, 79, 0.18) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(79, 79, 79, 0.18) 1px, transparent 1px);
-  background-size: 20px 20px;
+    linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
   background-position: 0 0;
+}
+
+.dark .grid-background {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
+}
+
+/* Hero-only radial spotlight (replaces full-viewport gradient) */
+.hero-spotlight {
+  background: radial-gradient(
+    60% 50% at 50% 0%,
+    rgba(13, 89, 242, 0.12) 0%,
+    transparent 70%
+  );
+}
+
+.dark .hero-spotlight {
+  background: radial-gradient(
+    60% 50% at 50% 0%,
+    rgba(13, 89, 242, 0.22) 0%,
+    transparent 70%
+  );
+}
+
+/* Skip-to-content link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10000;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #0d59f2;
+  color: white;
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 @keyframes glow {
@@ -81,4 +122,16 @@ body {
 
 svg.glow line {
   animation: glow 2000ms ease-in-out infinite alternate;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -6,9 +6,13 @@ export const PERSONAL_INFO = {
   email: 'lakkanna.walikar@gmail.com',
   phone: '+91-7259961669',
   phoneFormatted: '+91-7259961669',
-  location: 'Bangalore - 560016, India',
-  copyrightYear: 2025,
+  location: 'Bangalore, India',
+  careerStartYear: 2018,
+  copyrightYear: new Date().getFullYear(),
 } as const;
+
+export const yearsOfExperience = (): number =>
+  new Date().getFullYear() - PERSONAL_INFO.careerStartYear;
 
 // Social Media Links
 export const SOCIAL_LINKS = {

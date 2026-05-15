@@ -11,7 +11,10 @@ export default function Home() {
       <TopNavBar />
       <Background />
       <div className="relative z-10 flex h-full w-full max-w-5xl grow flex-col px-4 sm:px-6 lg:px-8 py-10 mt-24">
-        <main className="flex flex-1 flex-col items-center justify-center py-8 text-center">
+        <main
+          id="main"
+          className="flex flex-1 flex-col items-center justify-center py-8 text-center"
+        >
           <HeroSection />
           <StatsSection />
         </main>

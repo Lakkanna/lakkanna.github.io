@@ -2,6 +2,7 @@ import TopNavBar from '@/components/TopNavBar';
 import Footer from '@/components/Footer';
 import Background from '@/components/Background';
 import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 import { PROJECT_LINKS } from '@/constants';
 
 interface Project {
@@ -55,13 +56,13 @@ const projects: Project[] = [
 export default function ProjectsPage() {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center overflow-x-hidden">
+      <TopNavBar />
       <Background />
       <div className="relative z-10 flex h-full w-full max-w-5xl grow flex-col px-4 sm:px-6 lg:px-8">
-        <TopNavBar />
-        <main className="flex flex-1 flex-col py-10 mt-24">
+        <main id="main" className="flex flex-1 flex-col py-10 mt-24">
           <div className="flex flex-col py-8 gap-8">
             {projects.map((project, index) => (
-              <div
+              <article
                 key={index}
                 className="glassmorphic-card rounded-xl p-6 shadow-lg"
               >
@@ -85,7 +86,7 @@ export default function ProjectsPage() {
                     {project.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/20 dark:text-primary/90"
+                        className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary border border-primary/20 dark:bg-primary/20 dark:text-primary/90"
                       >
                         {tech}
                       </span>
@@ -96,20 +97,19 @@ export default function ProjectsPage() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                      aria-label={`Open ${project.title} in a new tab`}
+                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors rounded focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 self-start"
                     >
                       <span>
                         {project.link.includes('marketplace.visualstudio.com')
                           ? 'View on VS Code Marketplace'
-                          : 'Visit Website'}
+                          : 'Visit website'}
                       </span>
-                      <span className="material-symbols-outlined text-base">
-                        open_in_new
-                      </span>
+                      <ArrowUpRight className="h-4 w-4" aria-hidden />
                     </Link>
                   )}
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </main>

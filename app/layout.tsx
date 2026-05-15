@@ -1,8 +1,9 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { PERSONAL_INFO, SOCIAL_LINKS, EXTERNAL_LINKS } from '@/constants';
+import { PERSONAL_INFO, SOCIAL_LINKS } from '@/constants';
 import Chat from '@/components/Chat';
+import ThemeScript from '@/components/ThemeScript';
 
 const dankMono = localFont({
   src: [
@@ -51,19 +52,31 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f5f6f8' },
+    { media: '(prefers-color-scheme: dark)', color: '#101622' },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <link href={EXTERNAL_LINKS.materialSymbols} rel="stylesheet" />
+        <ThemeScript />
       </head>
       <body
         className={`${dankMono.variable} font-display bg-background-light dark:bg-background-dark text-content-light dark:text-content-dark`}
       >
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         {children}
         <Chat />
       </body>
