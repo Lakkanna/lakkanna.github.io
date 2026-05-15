@@ -53,5 +53,15 @@
     "*.{json,css,md}": [
       "prettier --write"
     ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "msgpackr-extract",
+      "onnxruntime-node",
+      "protobufjs",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }
