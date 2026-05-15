@@ -14,7 +14,7 @@ describe('ShowcaseSection', () => {
     render(<ShowcaseSection />);
     expect(screen.getByText('CCA-F Mock Tests')).toBeInTheDocument();
     expect(screen.getByText('SVG Creator')).toBeInTheDocument();
-    expect(screen.getByText('noobstoday')).toBeInTheDocument();
+    expect(screen.getByText('MyMacros')).toBeInTheDocument();
   });
 
   it('renders descriptions for each showcase item', () => {
@@ -25,7 +25,9 @@ describe('ShowcaseSection', () => {
     expect(
       screen.getByText(/create and export svg illustrations/i)
     ).toBeInTheDocument();
-    expect(screen.getByText(/curated learning paths/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/ai-powered nutrition tracking/i)
+    ).toBeInTheDocument();
   });
 
   it('renders links for each showcase item', () => {
@@ -36,7 +38,20 @@ describe('ShowcaseSection', () => {
     const hrefs = links.map((link) => link.getAttribute('href'));
     expect(hrefs).toContain('/architect-practice-lab/');
     expect(hrefs).toContain('/svg-maker/');
-    expect(hrefs).toContain('/noobstoday/');
+    expect(hrefs).toContain('https://noobstoday.netlify.app/');
+  });
+
+  it('opens external links in a new tab with safe rel attributes', () => {
+    render(<ShowcaseSection />);
+    const externalLink = screen
+      .getAllByRole('link')
+      .find(
+        (link) =>
+          link.getAttribute('href') === 'https://noobstoday.netlify.app/'
+      );
+    expect(externalLink).toBeDefined();
+    expect(externalLink).toHaveAttribute('target', '_blank');
+    expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('renders technology tags for each showcase item', () => {

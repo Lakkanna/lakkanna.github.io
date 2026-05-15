@@ -3,7 +3,7 @@ export const PERSONAL_INFO = {
   fullName: 'Lakkanna Ramachandra Walikar',
   displayName: 'Lakkanna Walikar',
   title: 'Senior Software Engineer',
-  email: 'lakkannawalikar@gmail.com',
+  email: 'lakkanna.walikar@gmail.com',
   phone: '+91-7259961669',
   phoneFormatted: '+91-7259961669',
   location: 'Bangalore - 560016, India',
@@ -12,7 +12,7 @@ export const PERSONAL_INFO = {
 
 // Social Media Links
 export const SOCIAL_LINKS = {
-  linkedin: 'https://www.linkedin.com/in/lakkanna-walikar-35702662/',
+  linkedin: 'https://www.linkedin.com/in/lakkanna-walikar',
   github: 'https://github.com/lakkanna',
   medium: 'https://medium.com/@lakkannawalikar',
 } as const;
@@ -34,6 +34,7 @@ export const PROJECT_LINKS = {
     'https://marketplace.visualstudio.com/items?itemName=lakkannawalikar.css-converter',
   travisClient:
     'https://marketplace.visualstudio.com/items?itemName=Lakkannawalikar.the-travis-client',
+  noobstoday: 'https://noobstoday.netlify.app/',
 } as const;
 
 // External Links

@@ -1,4 +1,4 @@
-import { ROUTES } from '@/constants';
+import { PROJECT_LINKS, ROUTES } from '@/constants';
 
 interface ShowcaseItem {
   title: string;
@@ -26,12 +26,12 @@ const showcaseItems: ShowcaseItem[] = [
     icon: 'draw',
   },
   {
-    title: 'noobstoday',
+    title: 'MyMacros',
     description:
-      'Curated learning paths and resources for developers at every level. From fundamentals to advanced topics, bridging the gap between beginner and skilled developer.',
-    technologies: ['Next.js', 'React', 'TypeScript', 'Education'],
-    link: ROUTES.noobstoday,
-    icon: 'rocket_launch',
+      'AI-powered nutrition tracking with personalized fitness goals and intelligent insights that adapt to your lifestyle. Automatic calorie counting and macro monitoring with adaptive recommendations.',
+    technologies: ['Next.js', 'React', 'AI', 'Health'],
+    link: PROJECT_LINKS.noobstoday,
+    icon: 'monitor_heart',
   },
 ];
 
@@ -43,33 +43,40 @@ export default function ShowcaseSection() {
           What I&apos;ve Built
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {showcaseItems.map((item) => (
-            <a
-              key={item.title}
-              href={item.link}
-              className="glassmorphic-card flex flex-col rounded-xl p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
-            >
-              <span className="material-symbols-outlined mb-4 text-3xl text-primary">
-                {item.icon}
-              </span>
-              <h3 className="mb-2 text-xl font-bold text-text-light dark:text-text-dark">
-                {item.title}
-              </h3>
-              <p className="mb-4 flex-1 text-sm text-subtext-light dark:text-subtext-dark">
-                {item.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {item.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/20 dark:text-primary/90"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </a>
-          ))}
+          {showcaseItems.map((item) => {
+            const isExternal = /^https?:\/\//.test(item.link);
+            return (
+              <a
+                key={item.title}
+                href={item.link}
+                {...(isExternal && {
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                })}
+                className="glassmorphic-card flex flex-col rounded-xl p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
+              >
+                <span className="material-symbols-outlined mb-4 text-3xl text-primary">
+                  {item.icon}
+                </span>
+                <h3 className="mb-2 text-xl font-bold text-text-light dark:text-text-dark">
+                  {item.title}
+                </h3>
+                <p className="mb-4 flex-1 text-sm text-subtext-light dark:text-subtext-dark">
+                  {item.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {item.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary dark:bg-primary/20 dark:text-primary/90"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>
