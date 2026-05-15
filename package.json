@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@ai-hero/sandcastle": "^0.5.10",
-    "@commitlint/cli": "^20.1.0",
+    "@commitlint/cli": "^21.0.1",
     "@commitlint/config-conventional": "^20.0.0",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
