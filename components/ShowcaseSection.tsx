@@ -65,7 +65,7 @@ export default function ShowcaseSection() {
                   target: '_blank',
                   rel: 'noopener noreferrer',
                 })}
-                className="group glassmorphic-card flex flex-col rounded-xl p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl active:scale-[0.99] focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
+                className="group glassmorphic-card flex flex-col rounded-xl p-6 transition-all hover:-translate-y-1 hover:shadow-md active:scale-[0.99] focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
               >
                 <div className="flex items-center justify-between">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">

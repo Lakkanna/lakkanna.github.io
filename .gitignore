@@ -36,3 +36,8 @@ next-env.d.ts
 
 # models
 */models/*
+
+mockups/
+
+docs/agents
+CLAUDE.md

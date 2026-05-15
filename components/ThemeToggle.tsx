@@ -47,7 +47,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label={label}
       title={label}
-      className="inline-flex h-11 w-11 items-center justify-center rounded-md text-content-light dark:text-content-dark hover:bg-card-light dark:hover:bg-card-dark transition-colors focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
+      className="inline-flex h-11 w-11 items-center justify-center rounded-md text-content-light dark:text-content-dark hover:text-primary dark:hover:text-primary transition-colors focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
     >
       {theme === null ? (
         <span className="h-5 w-5" aria-hidden />

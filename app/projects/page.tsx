@@ -62,10 +62,7 @@ export default function ProjectsPage() {
         <main id="main" className="flex flex-1 flex-col py-10 mt-24">
           <div className="flex flex-col py-8 gap-8">
             {projects.map((project, index) => (
-              <article
-                key={index}
-                className="glassmorphic-card rounded-xl p-6 shadow-lg"
-              >
+              <article key={index} className="glassmorphic-card rounded-xl p-6">
                 <div className="flex flex-col gap-4">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
